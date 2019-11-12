@@ -11,7 +11,7 @@ DXP Cloud provides two ways for customers to take advantage of the Disaster Reco
 
 
 
-##Cross-Region Disaster Recovery Strategies
+## Cross-Region Disaster Recovery Strategies
 
 There are multiple DR strategies in the IT industry and they are considered to be cold, warm, or hot. These strategies indicate how prepared the system is to recover when something goes wrong.
 An analogy would be how you would respond if you were driving and had a flat tire. How you deal with this situation depends on how equipped you are:
@@ -32,12 +32,7 @@ It's not *Cold* since you don't have to contact our support in order to solve th
 We’ll use two examples to show how a DR environment setup can be helpful and step-by-step instructions for getting it to work as expected. Example 1 deals with configuring the DR environment once disaster has struck. Example 2 deals with how to restore the Production environment once the disaster has passed.
 
 ### **1. Once the event of a disaster happens**
-![img](https://lh3.googleusercontent.com/HKVJXziwiaES-d1ccDH5E3Mq01SxZSxHFZbA_ByLsN_ghnrmc2cuUCBSkAn-W6djoVHb2vshlWEZK9vEDdlBLICNCeRHxuSwCn0XTT_DHIN6XhWHicH2XBqttp1pfS5IB5JUBt19)
-
-*Picture 1:*
-*Restoring from Production to Disaster Recovery Environment*
-
-
+![Picture 1: Restoring from Production to Disaster Recovery Environment](../../images/dr-01.png)
 
 |              |                                                              |
 | ------------ | ------------------------------------------------------------ |
@@ -51,10 +46,8 @@ We’ll use two examples to show how a DR environment setup can be helpful and s
 
 ###  **2. Once the disaster is no longer present**
 
-![img](https://lh3.googleusercontent.com/lkbajJwWWufSuUYCWWA57pge5wAkDNBLcGbikfMTz8vK1OgUSq9ESGAne5M9DCKAfHYESlBEVPTKuTXA1prna9Ftvz_jmjLMoFCJVZjbwB8kEhY4YNBb_nHrQynYl2ZS2JI1YG3c)
 
-*Picture 2:**
-*Restoring from Disaster Recovery Environment to Production*
+![Picture 2: Restoring from Disaster Recovery Environment to Production](../../images/dr-02.png)
 
 |              |                                                              |
 | ------------ | ------------------------------------------------------------ |
@@ -76,21 +69,22 @@ There are certain actions that the Liferay Cloud team needs to perform before yo
 
 You must also be an Admin member on both environments.  
 
-![img](https://lh4.googleusercontent.com/-gXJPjYQPh5sMNegiBRinB3fOS6Q_D-GMFCeze77TjNXW_lQFtxHXcEN9GxM4MdT_y0bK3fyT4dcFdiXc52UiXszgJebqtsaGBvYAbm5ywLljZ48R2KewaFavNGCU1a5X5f5qTsm)
+![Picture 3](../../images/dr-03.png)
 
 ### 2. Make sure the VPN has been configured in the DR environment**
 
 If you have VPN enabled on the Production environment, you need to make sure that has also been configured in the DR environment.
 
-![img](https://lh6.googleusercontent.com/RiSRtEoWHD7ogfty01UtjLmNcOhra5sl5OlUj2XDTqR5AazjrrhQuonkacIRppTD7yFP8sysk5bOhw8q737wYfgtlxd73YEU65OD3uhgegwIi84bFAiiR-c29mv9zzLPnFx9UTQA)
-
+![Picture 4](../../images/dr-04.png)
 
 
 ### **3. Deploy the latest stable Build from Production to DR environment**
 
 Go to the Builds page and find the number of the latest build that was deployed to the Production environment. Select that build and deploy it to the DR environment.
 
-![img](https://lh4.googleusercontent.com/IHEzCCycqgmWpaQDEOQg9rvargFnDem8hUyXmGXsem3qvRVKzjt9PnEkI29TAGlAckiV_DGMw4RwlDTjDzH9v7Noyb_YrBpGHavAihi_Ipenctd8YG82LxpzPgFlk0M9U3mmG7fK)![img](https://lh4.googleusercontent.com/XQkIrGIpuWAfT6_Fyt6j17DmDWmytawjeGmgUHWSiLvEto0UE1Bh2jic21qtwGWX71pg7sGmW7QqsrYVAQerX1bIvQ3ONhBRW6bLzbbkE4a1lMhtNku4Wgj9eHSDofwS2VVi611y)
+
+![Picture 5](../../images/dr-05.png)
+![Picture 6](../../images/dr-06.png)
 
 ## Automatic Data Recovery Workflow
 
@@ -116,13 +110,15 @@ It covers both the event of a disaster happening and also what to do after the d
 
 Once the build is deployed to the DR environment, restore the latest backup from Production to the DR environment.
 
-![img](https://lh4.googleusercontent.com/P9CmcnUhaQ1E3OxM-tIABSFhOTOPvZMPvbpHLajPJJchs_nYJ3RC3d3197RuIvzOSKNkiDjCitC2DzmdOeyzcIWkgw7KRBME5qBeGTdBcbYC9DW-eaF24PEboUrHOVFEo3_q1Vy1)![img](https://lh6.googleusercontent.com/6gZE68FAJ_wOP09VUcrRkkZwqT5A-xs0g4Oygm4zCl84GK1t92WSs-CvAHuGRMw9wBrgKeKI4zLf-tEtG63QvAi9SVU-9vClsXa_Q6XH38Un5MbFPLDD5k9cW8_c9hQu2MzSfTTy)
+
+![Picture 7](../../images/dr-07.png)
+![Picture 8](../../images/dr-08.png)
 
 #### 1.2 Configure Web Server custom domain in the DR environment
 
 Remove the custom domain from the Production environment, update your DNS records, and update the custom domain from the DR environment.
 
-![img](https://lh4.googleusercontent.com/N0fbYMrhDlRZCqZpvQ5hfJSeOfZAPuGfgRx06owxp7k-9t7F4NU2kB_bHJnIrZztJKdAOUiu5_TdoskrPT3n1mYJqFIbWNHSkWDJ1coDMx2xFVACsWbXbNBnD2YCEFHWgKMrjcnx)
+![Picture 9](../../images/dr-09.png)
 
 ### 2. Once the disaster is no longer present
 
@@ -130,19 +126,22 @@ Remove the custom domain from the Production environment, update your DNS record
 
 Before moving back to the Production environment, it's important to create a new backup from the DR environment since there has been new data generated.
 
-![img](https://lh6.googleusercontent.com/_GTKTofkZN1JziUQ7r9-YFsg0C3RvbZnuLn-ojOuZSKA2w94xHmmoTtSeJCZpPMwNJaTyNIKPiRXMR0eIUg1latSZeW3h7TBGJ7gDFmY5gesGPXsIf14aT93szYWG5_DSN5HlUQf)
+![Picture 10](../../images/dr-10.png)
 
 #### 2.2 Restore the Manual Backup from DR to Production environment
 
 Now you can restore the Manual Backup that was just made from DR into the Production environment.
 
-![img](https://lh6.googleusercontent.com/ayqL8yyi9Fu3lvQNMMmXdMSe8EXtaHaclPWSBG4wYOECWcuw5-nJRVMKpYsArfrSJvbuIBoyI6zzeocbE_7ndtU9d_VWkCKtbbnWG1IResvwjEjLGNqueHKva3IG52MY-NjmAu_K)![img](https://lh3.googleusercontent.com/ToemZYCBSlF0Dt8h2JmiHBomLNtwZU1QyUHpT8mZhLb-lx5LS99mkvIPu0F73GSuhn3BINDI9A_dmMb0_ge1ju1qEt8YNLNwudaGB1ld8ksiiyTnMhfVG4Su2jDZSORUC5LhrKUu)
+
+![Picture 11](../../images/dr-11.png)
+![Picture 12](../../images/dr-12.png)
 
 #### 2.3 Configure Web Server custom domain in the Production environment
 
 Remove the custom domain from the DR environment, update your DNS records, and update the custom domain from the Production environment.
 
-![img](https://lh5.googleusercontent.com/Gj4r5y680DlAlLy3ZFgpcffE1c7gQoIgjIttVYYc2bXPlq3VSAF0350cjfjk3PLoZBHw9PoD6o4auSCAeJJecgRZPlTWqCYHLYv2ng8o84JLDqWKb1kM262WWuOwTB12YBKwXgH-)
+
+![Picture 13](../../images/dr-13.png)
 
 
 
