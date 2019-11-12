@@ -16,7 +16,7 @@ DXP Cloud provides two ways for customers to take advantage of the Disaster Reco
 There are multiple DR strategies in the IT industry and they are considered to be cold, warm, or hot. These strategies indicate how prepared the system is to recover when something goes wrong.
 An analogy would be how you would respond if you were driving and had a flat tire. How you deal with this situation depends on how equipped you are:
 
-|          |                                                              |
+|||
 | -------- | ------------------------------------------------------------ |
 | **Cold** | You have no spare tire, so you must call someone to come to you with a new tire and replace it. Your trip stops until help arrives to make the repair. |
 | **Warm** | You have a spare tire and a replacement kit, so you can get back on the road using what you have in your car. However, you must stop your journey to repair the problem. |
@@ -52,7 +52,7 @@ We’ll use two examples to show how a DR environment setup can be helpful and s
 |              |                                                              |
 | ------------ | ------------------------------------------------------------ |
 | **4:00 pm**  | we are notified that the *eu-west2* region has been recovered and the incident is over, which means that we are ready to go back to our original Production environment |
-| .**4:16 pm** | We'll perform a manual backup since there has been new user data generated during the period we were using the DR environment. |
+| **4:16 pm** | We'll perform a manual backup since there has been new user data generated during the period we were using the DR environment. |
 | **4:21 pm**  | We can use the manual backup we just generated to restore the Production environment and then change the Custom Domain. |
 
 Now we're back to serving traffic through the Production environment and our DR environment will stay running for when we need it again.
