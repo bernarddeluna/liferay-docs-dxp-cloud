@@ -6,9 +6,7 @@
 
 DXP Cloud basic setup provides a <u>VPN client-to-site connection with port forwarding support and redundant tunnels support.</u> This feature is commonly used to connect an environment from the cloud, such as the customer production environment, to the customer company internal network. For security and reliability, VPN connections are isolated per environment: production, staging, development.
 
-**IMAGEIMAGEIMAGE**
-
-_Topology 1 - DXP Cloud VPN client-to-site topology_
+![Topology 1 - DXP Cloud VPN client-to-site topology](../../images/cliente-site-vpn-01.png)
 
 The VPN feature supports the following protocols:
 
@@ -21,9 +19,7 @@ In order to increase resiliency, it’s possible to enable redundant VPN tunnels
 
 The customer can choose one of the protocols (IPSec or OpenVPN) to perform the connection from DXP Cloud Console settings page for the desired environment. Port forwarding rules are, conveniently, mapped from the user interface.
 
-**IMAGEIMAGEIMAGE**
-
-_Image 1 - DXP Cloud VPN settings for the customer environment_
+![Image 1 - DXP Cloud VPN settings for the customer environment](../../images/cliente-site-vpn-02.png)
 
 The VPN service will create the routes to each forwarding host and port provided at the Settings page in the Forwarding Port section and provide access to the mapped host from inside the cloud environment. For both, IPSec or OpenVPN, the required configurations are the same.
 
@@ -85,9 +81,7 @@ _Table 2 - Sample customer VPN server information and credentials_
 
 A common use-case for this feature is a DXP Portal instance running inside DXP Cloud accessing an HTTP service running inside the customer company network.
 
-**IMAGEIMAGEIMAGE**
-
-_Topology 2 - Portal instance accessing an HTTP service inside the customer’s company network_
+![Topology 2 - Portal instance accessing an HTTP service inside the customer’s company network](../../images/cliente-site-vpn-03.png)
 
 In this example, the Hello World service **192.168.100.30:8080** running inside the customer company network is accessible from DXP Portal service by the address **vpn:33000**. This is possible because of the client-to-server connection was established to the customer company VPN server **18.188.145.101:500** and a port forwarding rule was exposed into the local port **33000 **mapping to the application **192.168.100.30:8080**.
 
