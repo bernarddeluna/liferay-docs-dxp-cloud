@@ -28,8 +28,8 @@ The VPN service will create the routes to each forwarding host and port provided
 To successfully establish a connection between DXP Cloud and the customer company network, the customer must have a public IPSec or OpenVPN server and provide the following information (Table 1).
 
  
-
-| ------------------- | ------------------------------------------------------------ |
+| | |
+| --- | --- |
 | **Server Address**  | `<SERVER IP>`:`<SERVER PORT>`                                |
 | **Server Username** | `<LOGIN>`                                                    |
 | **Server Password** | `<PASSWORD>`                                                 |
@@ -42,21 +42,21 @@ _Table 1 - Customer VPN server information and credentials_
 
 **_Glossary_**
 
-_&lt;SERVER ADDRESS&gt; The IP where the VPN server is provided._
+`<SERVER ADDRESS>` The IP where the VPN server is provided._
 
-_&lt;SERVER PORT&gt; The PORT where the VPN server is provided._
+`<SERVER PORT>` The PORT where the VPN server is provided._
 
-_&lt;LOGIN&gt; The USERNAME for this VPN server._
+`<LOGIN>` The USERNAME for this VPN server._
 
-_&lt;PASSWORD&gt; The PASSWORD for this VPN server._
+`<PASSWORD>` The PASSWORD for this VPN server._
 
-_&lt;CA CERTIFICATE&gt; The CA CERTIFICATE for this connection VPN connection._
+`<CA CERTIFICATE>` The CA CERTIFICATE for this connection VPN connection._
 
-_&lt;APPLICATION IP&gt; The IP for the internal host which you what to access._
+`<APPLICATION IP>` The IP for the internal host which you what to access._
 
-_&lt;APPLICATION PORT&gt; The PORT for the internal host which you what to access._
+`<APPLICATION PORT>` The PORT for the internal host which you what to access._
 
-_&lt;LOCAL PORT&gt; The desired PORT to expose the mapped service, port range from 0 to 65535._
+`<LOCAL PORT>` The desired PORT to expose the mapped service, port range from 0 to 65535._
 
 
 
@@ -64,7 +64,9 @@ _&lt;LOCAL PORT&gt; The desired PORT to expose the mapped service, port range fr
 
  
 
-| ------------------- | ---------------------------------------------------------- |
+
+| | |
+| --- | --- |
 | **Server Address**  | 18.188.145.101:500                                         |
 | **Server Username** | user.liferay                                               |
 | **Server Password** | password                                                   |
@@ -88,11 +90,11 @@ In this example, the Hello World service **192.168.100.30:8080** running inside 
 After the connection and port forwarding rule is setup, requests to the Hello World service can be made from any DXP Cloud service, such as the DXP Portal.
 
  
-
+```
 curl vpn:33000_
 
-&lt;body&gt;&lt;h1&gt;Hello world!&lt;/h1&gt;&lt;/body&gt;&lt;/html>
-
+<body><h1>Hello world!</h1></body></html>
+```
 
 
 **DXP Cloud IP Ranges for Shared Cluster**
