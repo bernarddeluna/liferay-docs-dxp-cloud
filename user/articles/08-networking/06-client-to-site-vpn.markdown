@@ -10,8 +10,8 @@ DXP Cloud basic setup provides a <u>VPN client-to-site connection with port forw
 
 The VPN feature supports the following protocols:
 
-1. 1.IPsec (IKEv1, IKEv2, L2TP)
-2. 2.OpenVPN
+1. IPsec (IKEv1, IKEv2, L2TP)
+2. OpenVPN
 
 In order to increase resiliency, it’s possible to enable redundant VPN tunnels by configuring a connection to multiple destination VPN server IPs provided by the customer. The redundancy is placed in different availability zones to provide more resiliency.  At the moment, DXP Cloud does not support Site-to-Site VPN connection. The most common use-case, such as connecting to a service running on the company network, are covered by the client-to-site approach, this model is recommended for the containerized architecture and Kubernetes network layer provided.
 
@@ -23,14 +23,14 @@ The customer can choose one of the protocols (IPSec or OpenVPN) to perform the c
 
 The VPN service will create the routes to each forwarding host and port provided at the Settings page in the Forwarding Port section and provide access to the mapped host from inside the cloud environment. For both, IPSec or OpenVPN, the required configurations are the same.
 
-**Information required to establish a connection**
+## Information required to establish a connection
 
 To successfully establish a connection between DXP Cloud and the customer company network, the customer must have a public IPSec or OpenVPN server and provide the following information (Table 1).
 
  
 
-| **Server Address**  | `<SERVER IP>`:`<SERVER PORT>`                                |
 | ------------------- | ------------------------------------------------------------ |
+| **Server Address**  | `<SERVER IP>`:`<SERVER PORT>`                                |
 | **Server Username** | `<LOGIN>`                                                    |
 | **Server Password** | `<PASSWORD>`                                                 |
 | **Certificate**     | `<CA CERTIFICATE>`                                           |
@@ -64,8 +64,8 @@ _&lt;LOCAL PORT&gt; The desired PORT to expose the mapped service, port range fr
 
  
 
-| **Server Address**  | 18.188.145.101:500                                         |
 | ------------------- | ---------------------------------------------------------- |
+| **Server Address**  | 18.188.145.101:500                                         |
 | **Server Username** | user.liferay                                               |
 | **Server Password** | password                                                   |
 | **Certificate**     | -----BEGIN CERTIFICATE-----<br />-----END CERTIFICATE----- |
